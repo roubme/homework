@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>www.webmadang.net</title>
+<STYLE TYPE="text/css">
+<!--
+    td {font-size:9pt; color:#002E14; }
+-->
+</STYLE>
+<script language="javascript">
+<!--
+function bankDisplay(frm) {
+
+    var bank = frm.selectbank.selectedIndex;
+
+    switch( bank ){
+       case 0:
+         frm.bank.value = '은행 및 계좌번호가 표시됩니다.';
+         break;
+       case 1:
+         frm.bank.value = '(국X은행) 0XX-XX-XXXX-XXX';
+         break;
+       case 2:
+         frm.bank.value = '(기X은행) XXX-0XXXXX-0X-0XX';
+         break;
+       case 3:
+         frm.bank.value = '(우X은행) 1XX-XX-0XXXXXXX';
+         break;
+       case 4:
+         frm.bank.value = '(주X은행) 0XXXXXX-0X-0XXXXX';
+         break;
+    }
+
+    return true;
+}
+//-->
+</script>
+</head>
+<body>
+<form name = "form" >
+<table border="1" width="500"  bgcolor="#fffee9" align="center" cellspacing="0" cellpadding="3"
+ bordercolor="#000000" bordercolordark="#ffffff" bordercolorlight="#fddc78">
+    <tr>
+    <td align="left" width="120" bgcolor="#fffecc">
+    <font color="#0000ff">*</font> 입  금  은  행 :</td>
+    <td widht="400">
+    <select name="selectbank" onchange="bankDisplay(this.form)" >
+    <option selected value=0>-선택하세요-
+    <option value=1>국X은행
+    <option value=2>기X은행
+    <option value=3>우X은행
+    <option value=4>주X은행
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <td align="left" width="120" bgcolor="#fffecc">
+    <font color="#0000ff">*</font> 입  금  계  좌 :</td>
+    <td width="400">
+    <input name="bank" type="text" size="50" maxlength="50"></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>
